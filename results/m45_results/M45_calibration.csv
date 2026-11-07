@@ -1,0 +1,4 @@
+config,T,NLL_B_before,NLL_B_after,ECE_B_before,ECE_B_after
+single_s42,1.9562,0.9519,0.7773,0.1457,0.0113
+ens3,1.7592,0.8425,0.7357,0.1182,0.011
+ens3_tta8,1.7239,0.8202,0.7286,0.1135,0.0116

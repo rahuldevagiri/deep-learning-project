@@ -1,0 +1,22 @@
+{
+  "model": "segformer_b2_t3",
+  "members": [
+    "segformer_b2_t3_s42",
+    "segformer_b2_t3_s43",
+    "segformer_b2_t3_s44"
+  ],
+  "combine": "mean of softmax probabilities over members",
+  "tta": false,
+  "temperature": 1.733,
+  "apply": "p = softmax(log(mean_probs) / temperature)",
+  "val_mIoU": 0.5569,
+  "check_half_B": {
+    "T_half_A": 1.7592,
+    "ECE_before": 0.1182,
+    "ECE_after": 0.011,
+    "NLL_before": 0.8425,
+    "NLL_after": 0.7357
+  },
+  "fit_data": "validation split, 256 random valid pixels per sample",
+  "test_set": "untouched"
+}
