@@ -1,0 +1,24 @@
+{
+  "epochs": 20,
+  "lr": 0.0003,
+  "weight_decay": 0.01,
+  "batch_size": 16,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "loss": "weighted CE + Dice",
+  "aug": {
+    "p_gain": 0.5,
+    "gain_db": 1.0,
+    "p_speckle": 0.5,
+    "looks": 30
+  },
+  "norm_stats": "norm_stats_v2.json",
+  "data": "index_v2.csv (v1+v2)",
+  "selection": "best val mIoU per run",
+  "test_set": "untouched",
+  "run_model": "deeplabv3p_r34",
+  "smoke": false
+}
