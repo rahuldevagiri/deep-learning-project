@@ -1,0 +1,42 @@
+{
+  "frozen_system": {
+    "model": "segformer_b2_t3",
+    "members": [
+      42,
+      43,
+      44
+    ],
+    "temperature": 1.733,
+    "tta": false
+  },
+  "test_mIoU_all": [
+    0.5704,
+    0.5369,
+    0.6049
+  ],
+  "test_mIoU_v2_clean": [
+    0.5362,
+    0.5059,
+    0.5672
+  ],
+  "test_ECE_calibrated": 0.0198,
+  "pseudo_change_threshold_pp": {
+    "Tree": 9.91,
+    "Shrub/Grass": 18.34,
+    "Cropland": 11.55,
+    "Built-up": 1.69,
+    "Bare": 9.23,
+    "Water": 3.1,
+    "Wetland": 8.36
+  },
+  "area_error_p95_pp": {
+    "Tree": 29.64,
+    "Shrub/Grass": 45.21,
+    "Cropland": 31.22,
+    "Built-up": 19.88,
+    "Bare": 29.1,
+    "Water": 9.17,
+    "Wetland": 26.29
+  },
+  "note": "Test set evaluated once; no changes after results."
+}
