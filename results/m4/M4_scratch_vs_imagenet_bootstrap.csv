@@ -1,0 +1,3 @@
+A,B,mean_diff,CI_low,CI_high,P(A>B)
+pretrained_3seeds,scratch_s42,0.0184,0.0079,0.0298,1.0
+pretrained_s42,scratch_s42,0.0202,0.0091,0.031,1.0
