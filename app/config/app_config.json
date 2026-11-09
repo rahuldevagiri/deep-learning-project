@@ -1,0 +1,139 @@
+{
+  "model": {
+    "arch": "smp.Segformer mit_b2",
+    "in_channels": 9,
+    "classes": 7,
+    "members": [
+      "segformer_b2_t3_s42",
+      "segformer_b2_t3_s43",
+      "segformer_b2_t3_s44"
+    ],
+    "combine": "mean of softmax probabilities over members",
+    "tta": false,
+    "temperature": 1.733,
+    "apply": "p = softmax(log(mean_probs) / temperature)",
+    "temporal_input": "months m-1, m, m+1 stacked as 3 x [VV, VH, VV-VH] = 9 channels"
+  },
+  "preprocessing": {
+    "channels": [
+      "VV",
+      "VH",
+      "VV-VH"
+    ],
+    "clip": {
+      "VV": [
+        -30.0,
+        5.0
+      ],
+      "VH": [
+        -35.0,
+        -5.0
+      ]
+    },
+    "mean": [
+      -12.1919,
+      -19.7824,
+      7.5905
+    ],
+    "std": [
+      4.8622,
+      5.4628,
+      2.8136
+    ],
+    "nodata": -32768,
+    "scale": 100
+  },
+  "s1_collection": {
+    "collection": "COPERNICUS/S1_GRD",
+    "mode": "IW",
+    "polarisations": [
+      "VV",
+      "VH"
+    ],
+    "incidence_mask_deg": [
+      30.6,
+      45.2
+    ],
+    "composite": "monthly median"
+  },
+  "classes": [
+    "Tree",
+    "Shrub/Grass",
+    "Cropland",
+    "Built-up",
+    "Bare",
+    "Water",
+    "Wetland"
+  ],
+  "colors": [
+    "#006400",
+    "#ffbb22",
+    "#f096ff",
+    "#fa0000",
+    "#b4b4b4",
+    "#0064c8",
+    "#0096a0"
+  ],
+  "ignore_index": 255,
+  "change_thresholds_pp": {
+    "month_to_month_p95": {
+      "Tree": 9.91,
+      "Shrub/Grass": 18.34,
+      "Cropland": 11.55,
+      "Built-up": 1.69,
+      "Bare": 9.23,
+      "Water": 3.1,
+      "Wetland": 8.36
+    },
+    "first_to_last_p95": {
+      "Tree": 19.55,
+      "Shrub/Grass": 32.96,
+      "Cropland": 23.28,
+      "Built-up": 2.96,
+      "Bare": 20.04,
+      "Water": 12.36,
+      "Wetland": 14.11
+    },
+    "note": "From M5 test set; reference labels static, so values = model noise + real seasonality (upper bound of noise). Per 2.56 km patch."
+  },
+  "area_error_pp": {
+    "mean": {
+      "Tree": 7.02,
+      "Shrub/Grass": 12.71,
+      "Cropland": 6.18,
+      "Built-up": 3.38,
+      "Bare": 4.9,
+      "Water": 2.24,
+      "Wetland": 3.84
+    },
+    "p95": {
+      "Tree": 29.64,
+      "Shrub/Grass": 45.21,
+      "Cropland": 31.22,
+      "Built-up": 19.88,
+      "Bare": 29.1,
+      "Water": 9.17,
+      "Wetland": 26.29
+    },
+    "note": "|predicted % - WorldCover %| per 2.56 km patch on M5 test set; WorldCover itself ~77% accurate."
+  },
+  "test_performance": {
+    "mIoU_v2_clean": [
+      0.5362,
+      0.5059,
+      0.5672
+    ],
+    "mIoU_all_test": [
+      0.5704,
+      0.5369,
+      0.6049
+    ],
+    "ECE_calibrated": 0.0198
+  },
+  "known_limits": [
+    "mountains >15 deg slope: test mIoU 0.39",
+    "flooded grasslands: test mIoU 0.37",
+    "trained on 2021 (S1A+S1B); 2022-2024 single-satellite composites may be noisier",
+    "swath-edge incidence mask can remove all pixels at some locations"
+  ]
+}

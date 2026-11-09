@@ -1,0 +1,11 @@
+gradio==6.31.0
+segmentation-models-pytorch==0.6.0
+torch==2.13.0
+earthengine-api==1.7.51
+folium==0.20.0
+plotly==6.9.0
+pyproj==3.8.0
+numpy==2.4.6
+pandas==3.0.4
+matplotlib==3.11.0
+requests==2.33.1

@@ -1,0 +1,5 @@
+lat_zone,n_locations,n_samples,mIoU_ensemble,reliable
+tropical,147,1764,0.584,yes
+subtropical,88,1054,0.575,yes
+temperate,183,2192,0.511,yes
+boreal/polar,71,844,0.559,yes

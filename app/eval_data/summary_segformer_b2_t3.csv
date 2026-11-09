@@ -1,0 +1,4 @@
+model,seed,best_epoch,val_mIoU,pixel_acc,macro_F1,train_min,peak_mem_GB,params_M,IoU_Tree,IoU_Shrub/Grass,IoU_Cropland,IoU_Built-up,IoU_Bare,IoU_Water,IoU_Wetland
+segformer_b2_t3,42,12,0.5491,0.7056,0.6962,136.1,2.99,24.7,0.6516,0.3852,0.5989,0.6531,0.4363,0.7829,0.3361
+segformer_b2_t3,43,16,0.5469,0.7077,0.6945,136.0,2.99,24.7,0.6573,0.4021,0.6167,0.6563,0.4126,0.7552,0.3284
+segformer_b2_t3,44,14,0.5488,0.7061,0.6974,135.7,2.99,24.7,0.6446,0.4042,0.6168,0.6572,0.413,0.75,0.3556

@@ -1,0 +1,2 @@
+model,seed,best_epoch,val_mIoU,pixel_acc,macro_F1,train_min,peak_mem_GB,params_M,IoU_Tree,IoU_Shrub/Grass,IoU_Cropland,IoU_Built-up,IoU_Bare,IoU_Water,IoU_Wetland
+deeplabv3p_r34_scratch,42,20,0.4712,0.6285,0.6251,70.4,1.33,22.4,0.5755,0.2653,0.4853,0.6125,0.3391,0.7058,0.3147

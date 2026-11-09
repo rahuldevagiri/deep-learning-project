@@ -1,0 +1,4 @@
+terrain,n_locations,n_samples,mIoU_ensemble,reliable
+flat <5,342,4092,0.563,yes
+hilly 5-15,77,923,0.509,yes
+mountain >15,69,827,0.39,yes

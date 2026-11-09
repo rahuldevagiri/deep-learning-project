@@ -1,0 +1,16 @@
+biome_name,n_locations,n_samples,mIoU_ensemble,reliable
+Boreal Forests/Taiga,40,472,0.551,yes
+Deserts & Xeric Shrublands,19,228,0.569,yes
+Flooded Grasslands & Savannas,34,408,0.367,yes
+Mangroves,40,480,0.562,yes
+"Mediterranean Forests, Woodlands & Scrub",31,372,0.548,yes
+Montane Grasslands & Shrublands,51,612,0.459,yes
+Temperate Broadleaf & Mixed Forests,60,718,0.526,yes
+Temperate Conifer Forests,31,372,0.533,yes
+"Temperate Grasslands, Savannas & Shrublands",41,491,0.465,yes
+Tropical & Subtropical Coniferous Forests,6,72,0.415,no (<10 locations)
+Tropical & Subtropical Dry Broadleaf Forests,22,264,0.499,yes
+"Tropical & Subtropical Grasslands, Savannas & Shrublands",26,312,0.534,yes
+Tropical & Subtropical Moist Broadleaf Forests,31,372,0.581,yes
+Tundra,34,407,0.514,yes
+Unassigned (coast/water),23,274,0.534,yes

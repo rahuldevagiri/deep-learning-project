@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+# model weights are large: publish them as a release / Hugging Face model, not in git
+weights/
+# Earth Engine credentials - NEVER commit
+*.json.key
+*service-account*.json
+.env
+# fetched Sentinel-1 stacks (commit only the showcase ones on purpose, see README)
+cache/*
+!cache/.gitkeep
